@@ -6,20 +6,20 @@ def main():
 
     xcoord = 0
     ycoord = 0
+    aim = 0
 
     for instruction in instructions:
         direction = instruction[0]
         magnitude = int(instruction[-1])
         if direction == 'u':
-            ycoord -= magnitude
+            aim -= magnitude
         elif direction == 'd':
-            ycoord += magnitude
+            aim += magnitude
         else:
             xcoord += magnitude
+            ycoord += magnitude * aim
 
     print(xcoord * ycoord)
-
-
 
 if __name__ == "__main__":
     main()
