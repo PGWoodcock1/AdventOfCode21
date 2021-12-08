@@ -1,10 +1,7 @@
 def main():
-    #Open file and format as list
     file = list(open("AdvDay6Input", "r"))
     school = file[0].split(',')
     school = list(map(int, school))
-
-# Convert school to dictionary
 
     SchoolDict = {
         "Zeroes": 0,
@@ -30,7 +27,6 @@ def main():
             SchoolDict[keys[y]] = SchoolDict[keys[y+1]]
         SchoolDict[keys[6]] += NewFish
         SchoolDict[keys[8]] = NewFish
-        #print('Day {}: {}'.format(x,SchoolDict))
 
     print(sum(SchoolDict.values()))
 

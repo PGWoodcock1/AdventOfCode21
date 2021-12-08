@@ -1,5 +1,4 @@
 def main():
-    #Open file and format as list
     file = list(open("AdvDay6Input", "r"))
     school = file[0].split(',')
     school = list(map(int, school))
@@ -13,7 +12,6 @@ def main():
             if school[y] == -1:
                 school[y] = 6
                 school.append(8)
-        print(x)
 
     print(len(school))
 
